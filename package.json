@@ -1,0 +1,47 @@
+{
+  "name": "@realo/api-client",
+  "version": "1.0.0",
+  "description": "Official TypeScript/JavaScript client for the Realo REST API",
+  "license": "MIT",
+  "author": "Realo",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "realo-api": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test \"test/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "typescript": "^5.8.3"
+  },
+  "homepage": "https://github.com/realo-com/realo-api-client-typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realo-com/realo-api-client-typescript.git"
+  },
+  "keywords": [
+    "realo",
+    "api",
+    "real-estate"
+  ]
+}
